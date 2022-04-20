@@ -1,0 +1,6 @@
+{
+  "name": "siraj-make-money-with-machine-learning-midterm-tng-scriptgen",
+  "version": "1.0.0",
+  "description": "Make Money with Machine Learning Course by Siraj Raval - Midterm Assignment: TNG Script Generator",
+  "scripts": {
+    "prep-frontend": "cd ./
