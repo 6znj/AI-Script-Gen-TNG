@@ -22,4 +22,9 @@ const staticRootPath = join(process.cwd(), 'public');
   controllers: [],
 })
 export class AppModule implements OnModuleInit {
-  constructor(private mongoConnecti
+  constructor(private mongoConnectionService: MongoConnectionService) {}
+
+  async onModuleInit() {
+    await this.mongoConnectionService.initialize();
+  }
+}
