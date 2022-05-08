@@ -31,4 +31,17 @@ export class AuthController {
   }
 
   /**
- 
+   * Authenticate with Google.
+   */
+  @Get('google')
+  @UseGuards(AuthGuard('google'))
+  googleLogin() {
+    // initiates the Google OAuth2 login flow
+  }
+
+  /**
+   * Callback for authentication with Google.
+   */
+  @Get('google/callback')
+  @UseGuards(AuthGuard('google'))
+  googleLoginCallback
