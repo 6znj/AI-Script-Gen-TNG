@@ -44,4 +44,15 @@ export class AuthController {
    */
   @Get('google/callback')
   @UseGuards(AuthGuard('google'))
-  googleLoginCallback
+  googleLoginCallback(@Req() req, @Res() res) {
+    // handles the Google OAuth2 callback
+    const jwt: string = req.user.jwt;
+    if (jwt) {
+      res.redirect(`${this.appRedirectBaseUrl}/auth-with-jwt/${jwt}`);
+    } else {
+      res.redirect(`${this.appRedirectBaseUrl}/auth-with-jwt/failed`);
+    }
+  }
+
+  /**
+   * Perform authentication check.
