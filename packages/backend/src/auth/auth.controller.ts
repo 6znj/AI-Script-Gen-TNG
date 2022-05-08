@@ -16,4 +16,19 @@ import { UserRepository } from './user.repository';
 
 
 /**
- * Authentication 
+ * Authentication controller.
+ */
+@Controller('auth')
+export class AuthController {
+  appRedirectBaseUrl = 'http://localhost';
+
+  constructor(
+    configService: ConfigService,
+    private authService: AuthService,
+    private userRepository: UserRepository,
+  ) {
+    this.appRedirectBaseUrl = configService.get('APP_REDIRECT_BASE_URL');
+  }
+
+  /**
+ 
