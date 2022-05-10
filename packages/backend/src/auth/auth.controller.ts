@@ -56,3 +56,20 @@ export class AuthController {
 
   /**
    * Perform authentication check.
+   * Errors on invalid JWT using guard.
+   */
+  @Get('check')
+  @UseGuards(AuthGuard('jwt'))
+  authCheck() {
+    return {
+      isAuthenticated: true,
+    };
+  }
+
+  /**
+   * Perform user login.
+   */
+  @Post('login')
+  async login(@Body() payload: any) {
+    const username = payload.username;
+    const user = await t
