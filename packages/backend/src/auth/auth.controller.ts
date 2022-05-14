@@ -72,4 +72,12 @@ export class AuthController {
   @Post('login')
   async login(@Body() payload: any) {
     const username = payload.username;
-    const user = await t
+    const user = await this.userRepository.findOneById(username);
+    if (!user) {
+      throw new Error('Invalid credentials.');
+    }
+    const arePasswordsMatching = await bcrypt.compare(payload.password, user.password);
+    if (!arePasswordsMatching) {
+      throw new Error('Invalid credentials.');
+    }
+    const jwt = await this.authService.validateOAuthLogin(
