@@ -81,3 +81,20 @@ export class AuthController {
       throw new Error('Invalid credentials.');
     }
     const jwt = await this.authService.validateOAuthLogin(
+      username,
+      Provider.TEST,
+    );
+    return { jwt };
+  }
+
+  /**
+   * Perform user registration.
+   */
+  @Post('register')
+  async register(@Body() payload: any) {
+    const password = payload.password;
+    const _id = payload.username;
+    if (_id === '') {
+      throw new Error("Invalid username.");
+    }
+    if (passw
