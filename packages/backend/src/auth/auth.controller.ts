@@ -97,4 +97,13 @@ export class AuthController {
     if (_id === '') {
       throw new Error("Invalid username.");
     }
-    if (passw
+    if (password === '') {
+      throw new Error("Invalid password.");
+    }
+    const cryptedPassword = await bcrypt.hash(password, 10);
+    let user = null;
+    user = await this.userRepository.findOneById(_id);
+    if (!!user) {
+      throw new Error(`User '${_id}' does already exist.`);
+    }
+    user = { _id, password: cryptedPassword 
