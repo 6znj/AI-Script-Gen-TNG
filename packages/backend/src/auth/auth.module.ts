@@ -9,4 +9,14 @@ import * as passport from 'passport';
 import { UserRepository } from './user.repository';
 import { SharedModule } from '../shared/shared.module';
 
-@
+@Module({
+  imports: [ConfigModule, SharedModule],
+  controllers: [AuthController],
+  providers: [AuthService, UserRepository, GoogleStrategy, JwtStrategy],
+})
+export class AuthModule implements OnModuleInit {
+  onModuleInit() {
+    const useMockAuth = false;
+    if (useMockAuth) {
+      this.configureMockStrategy();
+   
