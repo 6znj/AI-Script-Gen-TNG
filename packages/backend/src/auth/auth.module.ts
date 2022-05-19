@@ -19,4 +19,12 @@ export class AuthModule implements OnModuleInit {
     const useMockAuth = false;
     if (useMockAuth) {
       this.configureMockStrategy();
-   
+    }
+  }
+
+  private configureMockStrategy() {
+    console.warn('Using mock auth!');
+    passport.unuse('jwt');
+    passport.use('jwt', new MockStrategy());
+  }
+}
