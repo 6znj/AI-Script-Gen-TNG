@@ -7,4 +7,6 @@ import { BaseMongoRepository } from '../shared/base-mongo.repository';
 @Injectable()
 export class UserRepository extends BaseMongoRepository {
   public get collection(): any {
-    return this._mongoConnectionService.db.collection('users
+    return this._mongoConnectionService.db.collection('users');
+  }
+}
