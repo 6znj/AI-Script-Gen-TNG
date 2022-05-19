@@ -106,4 +106,9 @@ export class AuthController {
     if (!!user) {
       throw new Error(`User '${_id}' does already exist.`);
     }
-    user = { _id, password: cryptedPassword 
+    user = { _id, password: cryptedPassword };
+    await this.userRepository.save(user);
+    console.log(`Registered user '${_id}'.`);
+    return {success: true};
+  }
+}
