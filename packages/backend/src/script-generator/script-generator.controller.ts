@@ -6,4 +6,13 @@ import { ScriptRepository } from './script.repository';
 /**
  * Controller for script generation.
  */
-@Controller('sc
+@Controller('script-generator')
+export class ScriptGeneratorController {
+  constructor(
+    private readonly scriptGenerator: ScriptGeneratorService,
+    private readonly scriptRepository: ScriptRepository,
+  ) {}
+
+  /**
+   * Generate new script.
+   * @param payload Payload from
