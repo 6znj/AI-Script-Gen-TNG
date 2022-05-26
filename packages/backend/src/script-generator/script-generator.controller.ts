@@ -22,4 +22,16 @@ export class ScriptGeneratorController {
   public async generateNewScript(@Req() req, @Body() payload: any) {
     const stripePaymentId = payload.payment.stripe.id;
     // PROD: In production, you would perform some sort of
-    // processing like validation / 
+    // processing like validation / persistence in DB
+    // using this payment token.
+    const userId = req.user.sub;
+    return await this.scriptGenerator.generateNewScript(stripePaymentId, userId);
+  }
+
+  /**
+   * Get recently generated script.
+   */
+  @Get('recent')
+  @UseGuards(AuthGuard('jwt'))
+  public async getRecentlyGenerated(@Req() req) {
+    const userId = req.user.sub
