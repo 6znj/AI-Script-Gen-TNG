@@ -45,4 +45,15 @@ export class ScriptGeneratorController {
   @UseGuards(AuthGuard('jwt'))
   public async findScriptsByMe(@Req() req) {
     const userId = req.user.sub;
-    return await this.scriptRepository.findAllByUser
+    return await this.scriptRepository.findAllByUserId(userId);
+  }
+
+  /**
+   * Get generated script by id.
+   */
+  @Get('script/:id')
+  @UseGuards(AuthGuard('jwt'))
+  public async getScriptById(@Param('id') id: string) {
+    return await this.scriptRepository.findOneById(id);
+  }
+}
