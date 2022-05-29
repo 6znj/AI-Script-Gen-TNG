@@ -11,4 +11,21 @@ import { DISCLAIMER } from './disclaimer.const';
 const execAsync = (...args) =>
   new Promise(resolve =>
     shell.exec(...args, (code, stdout, stderr) =>
-   
+      resolve({
+        code,
+        stdout,
+        stderr,
+      }),
+    ),
+  );
+
+/**
+ * Service providing script generation
+ * functionality.
+ */
+@Injectable()
+export class ScriptGeneratorService {
+
+  constructor(
+    private readonly scriptRepository: ScriptRepository,
+    private configService: ConfigSer
