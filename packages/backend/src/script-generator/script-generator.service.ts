@@ -28,4 +28,17 @@ export class ScriptGeneratorService {
 
   constructor(
     private readonly scriptRepository: ScriptRepository,
-    private configService: ConfigSer
+    private configService: ConfigService,
+  ) {}
+
+  /**
+   * Get working directory of script generator.
+   */
+  private getScriptGenWorkingDirectory() {
+    const scriptGenWorkingDirectory = this.configService
+      .get('SCRIPTGEN_WORKING_DIRECTORY')
+      .replace(new RegExp('{{cwd}}', 'g'), process.cwd());
+    return scriptGenWorkingDirectory;
+  }
+
+  
