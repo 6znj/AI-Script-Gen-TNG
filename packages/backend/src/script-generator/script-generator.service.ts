@@ -41,4 +41,11 @@ export class ScriptGeneratorService {
     return scriptGenWorkingDirectory;
   }
 
-  
+  /**
+   * Clean generated script from generator
+   * text output.
+   * @param allOutput Complete output of generator script.
+   */
+  private cleanGeneratedScript(allOutput: string) {
+    const headerLine = '-----BEGIN GENERATED TEXT-----';
+    const footerLine = '-----END GENERATED TEXT--
