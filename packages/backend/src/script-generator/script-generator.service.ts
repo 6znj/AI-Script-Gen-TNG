@@ -48,4 +48,14 @@ export class ScriptGeneratorService {
    */
   private cleanGeneratedScript(allOutput: string) {
     const headerLine = '-----BEGIN GENERATED TEXT-----';
-    const footerLine = '-----END GENERATED TEXT--
+    const footerLine = '-----END GENERATED TEXT-----';
+    const startOfTextPos = allOutput.indexOf(headerLine) + headerLine.length;
+    const endOfTextPos = allOutput.indexOf(footerLine);
+    const scriptText = allOutput.slice(startOfTextPos, endOfTextPos).trim();
+    return scriptText;
+  }
+
+  /**
+   * Start generation of new script.
+   */
+  pub
