@@ -58,4 +58,11 @@ export class ScriptGeneratorService {
   /**
    * Start generation of new script.
    */
-  pub
+  public async generateNewScript(stripeId: string, userId: string) {
+
+    // PROD: For production quality, this
+    // method should put the generation request into a
+    // proper job queue for scalability.
+    const startTime = new Date().getTime();
+    const uuidv4 = require('uuid/v4');
+    const id = uui
