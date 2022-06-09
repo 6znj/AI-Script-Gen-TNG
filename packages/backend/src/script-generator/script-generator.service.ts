@@ -65,4 +65,14 @@ export class ScriptGeneratorService {
     // proper job queue for scalability.
     const startTime = new Date().getTime();
     const uuidv4 = require('uuid/v4');
-    const id = uui
+    const id = uuidv4();
+    console.log(`Generating script with id '${id}', stripe id '${stripeId}'.`);
+    const generationStartResult = {
+      _id: id,
+      userId,
+      status: 'started',
+      startTime,
+    };
+    await this.scriptRepository.save(generationStartResult);
+    // Asynchronously start script generation
+    // in t
