@@ -75,4 +75,15 @@ export class ScriptGeneratorService {
     };
     await this.scriptRepository.save(generationStartResult);
     // Asynchronously start script generation
-    // in t
+    // in the background.
+    setImmediate(async () => {
+      await this.generateNewScriptTask(id, userId, startTime);
+    });
+    // Return reference on started
+    // script generation job with id.
+    return generationStartResult;
+  }
+
+  /**
+   * Generate new script using Python
+   * generator script in b
