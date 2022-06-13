@@ -86,4 +86,11 @@ export class ScriptGeneratorService {
 
   /**
    * Generate new script using Python
-   * generator script in b
+   * generator script in background.
+   */
+  private async generateNewScriptTask(id: string, userId: string, startTime: number) {
+    // Navigate to script generator working directory
+    // and go Python on it.
+    shell.cd(this.getScriptGenWorkingDirectory());
+    const pythonInterpreter = this.configService.get('PYTHON_INTERPRETER');
+    const generator
