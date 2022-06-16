@@ -93,4 +93,13 @@ export class ScriptGeneratorService {
     // and go Python on it.
     shell.cd(this.getScriptGenWorkingDirectory());
     const pythonInterpreter = this.configService.get('PYTHON_INTERPRETER');
-    const generator
+    const generatorScriptName = 'scriptgen.py';
+    // Start generation script.
+    const execResult: any = await execAsync(
+      `${pythonInterpreter} ${generatorScriptName}`,
+      { silent: true },
+    );
+    const endTime = new Date().getTime();
+    const generationTime = endTime - startTime;
+    const hasErrorStatusCode = execResult.code !== 0;
+    c
