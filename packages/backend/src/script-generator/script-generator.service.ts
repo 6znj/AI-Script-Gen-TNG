@@ -102,4 +102,16 @@ export class ScriptGeneratorService {
     const endTime = new Date().getTime();
     const generationTime = endTime - startTime;
     const hasErrorStatusCode = execResult.code !== 0;
-    c
+    const status = !hasErrorStatusCode ? 'completed' : 'failed';
+    console.log(
+      `Generated script with id '${id}', status code ${execResult.code} in ${generationTime}ms.`,
+    );
+    let generationResult: any = {
+      _id: id,
+      userId,
+      status,
+      startTime,
+      endTime,
+      generationTime,
+    };
+  
