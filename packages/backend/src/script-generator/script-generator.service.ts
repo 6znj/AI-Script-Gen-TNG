@@ -126,3 +126,15 @@ export class ScriptGeneratorService {
       };
     } else {
       generationResult = {
+        ...generationResult,
+        error: { message: execResult.stderr },
+      };
+    }
+    await this.scriptRepository.save(generationResult);
+  }
+
+  /**
+   * Get recently generated script by user id.
+   */
+  public async getRecentlyGeneratedByUserId(userId: string) {
+    return this.scriptRepo
