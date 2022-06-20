@@ -114,4 +114,15 @@ export class ScriptGeneratorService {
       endTime,
       generationTime,
     };
-  
+    const allOutput = execResult.stdout as string;
+    if (!hasErrorStatusCode) {
+      const scriptText = [
+        DISCLAIMER,
+        this.cleanGeneratedScript(allOutput),
+      ].join('\n\n');
+      generationResult = {
+        ...generationResult,
+        scriptText,
+      };
+    } else {
+      generationResult = {
