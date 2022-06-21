@@ -137,4 +137,6 @@ export class ScriptGeneratorService {
    * Get recently generated script by user id.
    */
   public async getRecentlyGeneratedByUserId(userId: string) {
-    return this.scriptRepo
+    return this.scriptRepository.findOneRecentByUserId(userId);
+  }
+}
