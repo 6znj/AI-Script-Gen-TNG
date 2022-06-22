@@ -48,3 +48,9 @@ export class ScriptRepository extends BaseMongoRepository {
             },
           },
         },
+        { $sort: { startTimeDate: -1 } },
+        { $project: { startTimeDate: false } },
+      ])
+      .toArray();
+  }
+}
