@@ -18,4 +18,21 @@ export class ScriptRepository extends BaseMongoRepository {
       .find({ userId, status: 'completed' })
       .sort({ startTime: -1 })
       .limit(1)
-      .next(
+      .next();
+  }
+
+  /**
+   * Find all scripts by user id.
+   * @param userId User id.
+   */
+  public findAllByUserId(userId: string) {
+    return this.findAll({ userId });
+  }
+
+  public findAll(query: any) {
+    return this.collection
+      .aggregate([
+        { $match: query },
+        {
+          $addFields: {
+  
