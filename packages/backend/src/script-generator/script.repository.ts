@@ -35,4 +35,16 @@ export class ScriptRepository extends BaseMongoRepository {
         { $match: query },
         {
           $addFields: {
-  
+            startTimeDate: { $convert: { input: '$startTime', to: 'date' } },
+          },
+        },
+        {
+          $addFields: {
+            title: {
+              $concat: [
+                'Script from ',
+                { $dateToString: { date: '$startTimeDate' } },
+              ],
+            },
+          },
+        },
