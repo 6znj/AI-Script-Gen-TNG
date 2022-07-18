@@ -5,4 +5,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
-import {
+import { AppComponent } from './app.component';
+import { HeaderComponent } from './header/header.component';
+import { AuthWithJwtPageComponent } from './auth-with-jwt-page/auth-with-jwt-page.component';
+import { GeneratorComponent } from './generator/generator.component';
+import { NotAuthenticatedAlertComponent } 
