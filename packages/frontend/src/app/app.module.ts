@@ -9,4 +9,8 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { AuthWithJwtPageComponent } from './auth-with-jwt-page/auth-with-jwt-page.component';
 import { GeneratorComponent } from './generator/generator.component';
-import { NotAuthenticatedAlertComponent } 
+import { NotAuthenticatedAlertComponent } from './not-authenticated-alert/not-authenticated-alert.component';
+import { NgxStripeModule } from 'ngx-stripe';
+import { CheckoutWithStripeComponent } from './checkout-with-stripe/checkout-with-stripe.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AuthInterceptor } from 
