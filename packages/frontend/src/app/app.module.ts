@@ -13,4 +13,16 @@ import { NotAuthenticatedAlertComponent } from './not-authenticated-alert/not-au
 import { NgxStripeModule } from 'ngx-stripe';
 import { CheckoutWithStripeComponent } from './checkout-with-stripe/checkout-with-stripe.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { AuthInterceptor } from 
+import { AuthInterceptor } from './auth-interceptor.service';
+import { HomePageComponent } from './home-page/home-page.component';
+import { CommonModule } from '@angular/common';
+import { ToastrModule } from 'ngx-toastr';
+import { environment } from '../environments/environment';
+
+/**
+ * Angular app module.
+ */
+@NgModule({
+  declarations: [
+    AppComponent,
+    H
