@@ -39,4 +39,17 @@ import { environment } from '../environments/environment';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    NgxStripeModule.forRo
+    NgxStripeModule.forRoot(environment.stripeKey),
+    NgbModule,
+    ToastrModule.forRoot()
+  ],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true
+    }
+  ],
+  bootstrap: [AppComponent],
+  entryComponents: [CheckoutWithStripeComponent, NotAuthenticatedAlertComponent]
+})
