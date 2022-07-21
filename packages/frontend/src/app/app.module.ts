@@ -53,3 +53,4 @@ import { environment } from '../environments/environment';
   bootstrap: [AppComponent],
   entryComponents: [CheckoutWithStripeComponent, NotAuthenticatedAlertComponent]
 })
+export class AppModule {}
