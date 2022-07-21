@@ -25,4 +25,18 @@ import { environment } from '../environments/environment';
 @NgModule({
   declarations: [
     AppComponent,
-    H
+    HeaderComponent,
+    AuthWithJwtPageComponent,
+    GeneratorComponent,
+    NotAuthenticatedAlertComponent,
+    CheckoutWithStripeComponent,
+    HomePageComponent
+  ],
+  imports: [
+    BrowserAnimationsModule,
+    CommonModule,
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
+    NgxStripeModule.forRo
