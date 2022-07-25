@@ -12,4 +12,15 @@ import { Observable } from 'rxjs';
  * for authentication in any HTTP request.
  */
 @Injectable({
-  providedI
+  providedIn: 'root'
+})
+export class AuthInterceptor implements HttpInterceptor {
+  intercept(
+    req: HttpRequest<any>,
+    next: HttpHandler
+  ): Observable<HttpEvent<any>> {
+    // Get JWT from local storage.
+    const idToken = localStorage.getItem('id_token');
+    if (idToken) {
+      const cloned = req.clone({
+        
