@@ -25,4 +25,21 @@
     </p>
     <p style="font-weight: bold;">
       THIS IS USING A STRIPE TEST ACCOUNT, NO ACTUAL CHARGE IS TAKING PLACE.
-    <
+    </p>
+  </div>
+
+  <ngx-stripe-card
+    [options]="cardOptions"
+    [elementsOptions]="elementsOptions"
+  ></ngx-stripe-card>
+
+  <div class="error">
+      {{error?.message}}
+    </div>
+
+  <div style="margin-top: 16px;">
+    <button class="btn btn-primary btn-large" type="submit">
+      Order &amp; Pay
+    </button>
+  </div>
+</form>
