@@ -15,4 +15,16 @@ import { take } from 'rxjs/operators';
 @Component({
   selector: 'app-checkout-with-stripe',
   templateUrl: './checkout-with-stripe.component.html',
-  styleUrls: ['./checkout-with
+  styleUrls: ['./checkout-with-stripe.component.scss']
+})
+export class CheckoutWithStripeComponent {
+  @ViewChild(StripeCardComponent, { static: true })
+  private card: StripeCardComponent;
+
+  constructor(
+    public activeModal: NgbActiveModal,
+    private stripeService: StripeService
+  ) {}
+
+  /**
+   * Display options of Stripe Card El
