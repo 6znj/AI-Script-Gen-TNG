@@ -39,4 +39,22 @@ export class CheckoutWithStripeComponent {
         fontFamily: '"Helvetica Neue", Helvetica, sans-serif',
         fontSize: '18px',
         '::placeholder': {
-        
+          color: '#CFD7E0'
+        }
+      }
+    }
+  };
+
+  /**
+   * Options of Stripe Checkout Element.
+   */
+  public elementsOptions: ElementsOptions = {
+    locale: 'en'
+  };
+
+  /**
+   * Perform transaction of buying a
+   * script generation request.
+   */
+  public async buy() {
+    const result = await this.stripeServic
