@@ -57,4 +57,10 @@ export class CheckoutWithStripeComponent {
    * script generation request.
    */
   public async buy() {
-    const result = await this.stripeServic
+    const result = await this.stripeService
+      .createToken(this.card.getCard(), {})
+      .pipe(take(1))
+      .toPromise();
+    this.activeModal.close(result);
+  }
+}

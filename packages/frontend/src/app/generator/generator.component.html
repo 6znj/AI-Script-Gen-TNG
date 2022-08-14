@@ -1,0 +1,6 @@
+<div *ngIf="!!generationResult && generationResult.error">
+  <ngb-alert type="danger" [dismissible]="false">
+    <h1>
+      Script Generation Error
+    </h1>
+    {{ generationResult?.er
