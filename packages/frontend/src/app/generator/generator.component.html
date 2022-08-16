@@ -14,4 +14,19 @@
     <button
       class="btn btn-primary btn-large"
       (click)="generate()"
-      [disabled]="isDis
+      [disabled]="isDisabled"
+    >
+      Generate
+    </button>
+    <button
+      class="btn btn-primary btn-large"
+      (click)="loadRecentlyGenerated()"
+      [disabled]="isDisabled"
+    >
+      Load Recent
+    </button>
+  </div>
+  <span *ngIf="isGenerating" class="float-sm-right">
+    Generating...
+  </span>
+</div>
