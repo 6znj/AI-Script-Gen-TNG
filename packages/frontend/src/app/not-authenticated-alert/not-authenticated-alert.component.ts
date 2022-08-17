@@ -9,4 +9,6 @@ import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
   selector: 'app-not-authenticated-alert',
   templateUrl: './not-authenticated-alert.component.html'
 })
-export class No
+export class NotAuthenticatedAlertComponent {
+  constructor(public activeModal: NgbActiveModal) {}
+}
