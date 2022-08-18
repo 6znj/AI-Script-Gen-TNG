@@ -34,4 +34,19 @@ export class ScriptGeneratorService {
    * Get recently generated script.
    */
   public getRecentlyGenerated() {
+    return this.http.get(`${this.baseUrl}/script-generator/recent`).toPromise();
+  }
+
+  /**
+   * Get generated script by id.
+   */
+  public getScriptById(id: string) {
     return this.http
+      .get(`${this.baseUrl}/script-generator/script/${id}`)
+      .toPromise();
+  }
+
+  /**
+   * Check authentication state using JWT.
+   */
+  public a
