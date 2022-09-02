@@ -1,0 +1,6 @@
+builders:
+  inject_generator:
+    target: ":inject_generator"
+    import: "package:inject_generator/inject_generator.dart"
+    builder_factories:
+      - "summar
