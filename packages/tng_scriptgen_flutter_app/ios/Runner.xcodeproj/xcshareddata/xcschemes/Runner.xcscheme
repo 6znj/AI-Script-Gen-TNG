@@ -83,4 +83,9 @@
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
-   </AnalyzeActi
+   </AnalyzeAction>
+   <ArchiveAction
+      buildConfiguration = "Release"
+      revealArchiveInOrganizer = "YES">
+   </ArchiveAction>
+</Scheme>
