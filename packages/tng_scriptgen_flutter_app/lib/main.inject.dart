@@ -14,4 +14,13 @@ class Main$Injector implements _i1.Main {
   _i4.ScriptSyncService _singletonScriptSyncService;
 
   static _i5.Future<_i1.Main> create() async {
-  
+    final injector = Main$Injector._();
+
+    return injector;
+  }
+
+  _i1.MyApp _createMyApp() => _i1.MyApp(_createScriptRepository(),
+      _createScriptSyncService(), _createScriptGeneratorApiClient());
+  _i2.ScriptRepository _createScriptRepository() =>
+      _singletonScriptRepository ??= _i2.ScriptRepository();
+  _i4.ScriptSy
