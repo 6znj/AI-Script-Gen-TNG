@@ -27,4 +27,7 @@ class Main$Injector implements _i1.Main {
       _singletonScriptSyncService ??= _i4.ScriptSyncService(
           _createScriptRepository(), _createScriptGeneratorApiClient());
   _i3.ScriptGeneratorApiClient _createScriptGeneratorApiClient() =>
-      _singletonScriptGeneratorApiClient ??= _i3.ScriptGeneratorApiClient()
+      _singletonScriptGeneratorApiClient ??= _i3.ScriptGeneratorApiClient();
+  @override
+  _i1.MyApp get app => _createMyApp();
+}
