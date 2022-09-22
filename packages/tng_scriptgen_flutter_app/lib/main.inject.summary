@@ -33,4 +33,13 @@
           "injectedType": {
             "lookupKey": {
               "root": "asset:tng_scriptgen_flutter_app/lib/main.dart#MyApp",
-              "qua
+              "qualifier": null
+            },
+            "isProvider": false
+          },
+          "singleton": false,
+          "asynchronous": false,
+          "dependencies": [
+            {
+              "lookupKey": {
+                "root": "asset:tng_scriptgen_flutter_app/lib/services/script_repository.dart#ScriptRepository
