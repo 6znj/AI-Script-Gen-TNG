@@ -10,4 +10,13 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Home Pag
+        title: Text("Home Page"),
+      ),
+      body: Container(
+        padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 2.0),
+        child: GridView.count(
+          crossAxisCount: 2,
+          padding: EdgeInsets.all(3.0),
+          children: <Widget>[
+            makeDashboardItem("Script List", Icons.book, () {
+           
