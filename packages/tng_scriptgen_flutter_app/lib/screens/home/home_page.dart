@@ -40,3 +40,13 @@ class HomePage extends StatelessWidget {
             onTap: onTap,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
+              mainAxisSize: MainAxisSize.min,
+              verticalDirection: VerticalDirection.down,
+              children: <Widget>[
+                SizedBox(height: 50.0),
+                Center(
+                    child: Icon(
+                      icon,
+                      size: 40.0,
+                      color: Colors.black,
+ 
