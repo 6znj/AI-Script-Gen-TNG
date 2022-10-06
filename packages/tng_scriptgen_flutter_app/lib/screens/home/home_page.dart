@@ -75,4 +75,15 @@ class HomePage extends StatelessWidget {
               Text(
                 "Home Page\nClick on below icon to goto About Page",
                 // Setting the style for the Text
-                style: TextStyle(fontSi
+                style: TextStyle(fontSize: 20.0,),
+                textAlign: TextAlign.center,
+              ),
+              IconButton(
+                icon: Icon(
+                  Icons.info,
+                  color: Colors.blue,
+                ),
+                onPressed: () async {
+
+                },
+              
