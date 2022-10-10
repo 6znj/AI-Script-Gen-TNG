@@ -6,4 +6,12 @@
     "injectable": [
       {
         "name": "HomePage",
-        "
+        "constructor": {
+          "name": "",
+          "kind": "constructor",
+          "injectedType": {
+            "lookupKey": {
+              "root": "asset:tng_scriptgen_flutter_app/lib/screens/home/home_page.dart#HomePage",
+              "qualifier": null
+            },
+            "isProvider": f
