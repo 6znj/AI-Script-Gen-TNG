@@ -17,4 +17,14 @@ class ScriptListPageState extends State<ScriptListPage> {
   ScriptRepository _scriptRepository;
   ScriptSyncService _scriptSyncService;
 
-  ScriptListPageState(this._scriptRepos
+  ScriptListPageState(this._scriptRepository, this._scriptSyncService);
+
+  List items = List();
+  Map selectedItem;
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(title: Text('Scripts'), actions: <Widget>[
+          // action button
+          Builder(builder: (BuildContext context) 
