@@ -27,4 +27,10 @@ class ScriptListPageState extends State<ScriptListPage> {
     return Scaffold(
         appBar: AppBar(title: Text('Scripts'), actions: <Widget>[
           // action button
-          Builder(builder: (BuildContext context) 
+          Builder(builder: (BuildContext context) {
+            return IconButton(
+                icon: Icon(Icons.file_download),
+                onPressed: () async {
+                  final scaffold = Scaffold.of(context);
+                  scaffold.showSnackBar(SnackBar(
+                    content: const Text('Started
