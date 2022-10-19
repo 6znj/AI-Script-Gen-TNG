@@ -33,4 +33,14 @@ class ScriptListPageState extends State<ScriptListPage> {
                 onPressed: () async {
                   final scaffold = Scaffold.of(context);
                   scaffold.showSnackBar(SnackBar(
-                    content: const Text('Started
+                    content: const Text('Started sync......'),
+                  ));
+                  try {
+                    await syncScripts();
+                  } catch (err) {
+                    scaffold.showSnackBar(SnackBar(
+                      content: const Text('Sync failed!'),
+                    ));
+                    return;
+                  }
+     
