@@ -43,4 +43,13 @@ class ScriptListPageState extends State<ScriptListPage> {
                     ));
                     return;
                   }
-     
+                  scaffold.showSnackBar(SnackBar(
+                    content: const Text('Sync finished!'),
+                  ));
+                });
+          }),
+        ]),
+        body: ListView.builder(
+            itemCount: items.length,
+            itemBuilder: (context, index) {
+              return ScriptListT
