@@ -58,4 +58,13 @@ class ScriptListPageState extends State<ScriptListPage> {
                   final isCompleted = selectedItem["status"] == 'completed';
                   if (!isCompleted) {
                     final scaffold = Scaffold.of(context);
-                    scaffold.showSnackB
+                    scaffold.showSnackBar(SnackBar(
+                      content: const Text(
+                          'Script is still generating, please try again later!'),
+                    ));
+                    return;
+                  }
+                  Navigator.of(context).pushNamed('/script',
+                      arguments: selectedItem['originalId']);
+                });
+          
