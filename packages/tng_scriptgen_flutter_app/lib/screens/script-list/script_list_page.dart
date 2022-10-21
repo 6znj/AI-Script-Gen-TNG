@@ -67,4 +67,21 @@ class ScriptListPageState extends State<ScriptListPage> {
                   Navigator.of(context).pushNamed('/script',
                       arguments: selectedItem['originalId']);
                 });
-          
+              });
+            }));
+  }
+
+  @override
+  initState() {
+    super.initState();
+    loadScripts();
+  }
+
+  syncScripts() async {
+    await _scriptSyncService.sync();
+    await this.loadScripts();
+  }
+
+  loadScripts() async {
+    final newItems = await this._scriptRepository.findAll();
+    th
