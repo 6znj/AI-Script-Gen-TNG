@@ -52,4 +52,10 @@ class ScriptListPageState extends State<ScriptListPage> {
         body: ListView.builder(
             itemCount: items.length,
             itemBuilder: (context, index) {
-              return ScriptListT
+              return ScriptListTile(items[index], () {
+                setState(() {
+                  selectedItem = items[index];
+                  final isCompleted = selectedItem["status"] == 'completed';
+                  if (!isCompleted) {
+                    final scaffold = Scaffold.of(context);
+                    scaffold.showSnackB
