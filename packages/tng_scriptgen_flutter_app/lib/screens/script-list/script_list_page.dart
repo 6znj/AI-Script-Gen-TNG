@@ -84,4 +84,17 @@ class ScriptListPageState extends State<ScriptListPage> {
 
   loadScripts() async {
     final newItems = await this._scriptRepository.findAll();
-    th
+    this.setState(() {
+      this.items.clear();
+      this.items.addAll(newItems);
+    });
+  }
+}
+
+class ScriptListTile extends ListTile {
+  ScriptListTile(script, onTap)
+      : super(
+            title: Text(script['title']),
+            leading: CircleAvatar(
+              backgroundColor:
+                  script["status"] == 'completed' ? Colors.green : 
