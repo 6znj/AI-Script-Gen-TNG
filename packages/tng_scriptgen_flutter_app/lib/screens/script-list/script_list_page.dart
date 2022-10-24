@@ -97,4 +97,8 @@ class ScriptListTile extends ListTile {
             title: Text(script['title']),
             leading: CircleAvatar(
               backgroundColor:
-                  script["status"] == 'completed' ? Colors.green : 
+                  script["status"] == 'completed' ? Colors.green : Colors.red,
+              child: Text((script['status'][0] as String).toUpperCase()),
+            ),
+            onTap: onTap) {}
+}
