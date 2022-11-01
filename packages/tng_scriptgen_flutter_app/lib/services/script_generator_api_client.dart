@@ -12,4 +12,15 @@ class ScriptGeneratorApiClient {
   Future<Map> login(username, password) async {
     Map payload = {'username': username, 'password': password};
     final res = await http.post(this._baseUrl + '/auth/login',
-        h
+        headers: {"Content-Type": "application/json"},
+        body: json.encode(payload));
+    if (res.statusCode == 500) {
+      throw new Error();
+    }
+    final data = json.decode(res.body);
+    return data;
+  }
+
+  Future<Map> register(username, password) async {
+    Map payload = {'username': username, 'password': password};
+  
