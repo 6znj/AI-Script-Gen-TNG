@@ -34,4 +34,14 @@ class ScriptGeneratorApiClient {
   }
 
   Future<Object> generateNewScript() async {
-   
+    Map payload = {
+      'payment': {
+        'stripe': {'id': 'random'}
+      }
+    };
+    final res = await http.post(this._baseUrl + '/script-generator',
+        headers: {
+          "Authorization": "Bearer " + _token,
+          "Content-Type": "application/json"
+        },
+        body: json.encode
