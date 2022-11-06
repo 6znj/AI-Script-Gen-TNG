@@ -44,4 +44,16 @@ class ScriptGeneratorApiClient {
           "Authorization": "Bearer " + _token,
           "Content-Type": "application/json"
         },
-        body: json.encode
+        body: json.encode(payload));
+    if (res.statusCode == 500) {
+      throw new Error();
+    }
+    final data = json.decode(res.body);
+    return data;
+  }
+
+  Future<Object> getScriptById(String id) async {
+    final res = await http
+        .get(this._baseUrl + '/script-generator/script/' + id);
+    if (res.statusCode == 500) {
+      throw new 
