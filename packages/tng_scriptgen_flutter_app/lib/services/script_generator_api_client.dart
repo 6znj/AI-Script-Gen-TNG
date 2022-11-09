@@ -67,4 +67,13 @@ class ScriptGeneratorApiClient {
         this._baseUrl + '/script-generator/script/by-me',
         headers: {"Authorization": "Bearer " + _token});
     if (res.statusCode == 500) {
-      throw new Error(
+      throw new Error();
+    }
+    final data = json.decode(res.body);
+    return data;
+  }
+
+  setToken(token) {
+    this._token = token;
+  }
+}
