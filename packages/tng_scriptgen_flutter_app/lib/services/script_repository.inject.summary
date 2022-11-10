@@ -1,3 +1,14 @@
 {
   "asset": "asset:tng_scriptgen_flutter_app/lib/services/script_repository.dart",
-  "sum
+  "summary": {
+    "injector": [],
+    "module": [],
+    "injectable": [
+      {
+        "name": "ScriptRepository",
+        "constructor": {
+          "name": "",
+          "kind": "constructor",
+          "injectedType": {
+            "lookupKey": {
+              "root": "asset:tng_scriptgen_flutter_app/lib/services/scrip
