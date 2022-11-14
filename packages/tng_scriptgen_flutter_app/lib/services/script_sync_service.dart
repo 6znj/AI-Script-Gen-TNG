@@ -19,4 +19,10 @@ class ScriptSyncService {
     for (var script in remoteScripts) {
       script['originalId'] = script['_id'];
       script['_id'] = null;
-      await _rep
+      await _repository.save(script);
+    }
+    var found = await _repository.findAll();
+    found = found;
+  }
+
+}
