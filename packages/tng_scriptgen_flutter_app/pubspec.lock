@@ -11,4 +11,18 @@ packages:
   args:
     dependency: transitive
     description:
-      name:
+      name: args
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.5.2"
+  async:
+    dependency: transitive
+    description:
+      name: async
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "2.3.0"
+  boolean_selector:
+    dependency: transitive
+    description:
+      name: 
