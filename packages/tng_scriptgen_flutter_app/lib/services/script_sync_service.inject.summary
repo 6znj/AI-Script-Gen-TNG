@@ -24,4 +24,13 @@
                 "root": "asset:tng_scriptgen_flutter_app/lib/services/script_repository.dart#ScriptRepository",
                 "qualifier": null
               },
-              "isProvider": 
+              "isProvider": false
+            },
+            {
+              "lookupKey": {
+                "root": "asset:tng_scriptgen_flutter_app/lib/services/script_generator_api_client.dart#ScriptGeneratorApiClient",
+                "qualifier": null
+              },
+              "isProvider": false
+            }
+   
