@@ -40,4 +40,18 @@ packages:
     dependency: transitive
     description:
       name: build_config
-      url: "https://pub.
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.3.2"
+  build_daemon:
+    dependency: transitive
+    description:
+      name: build_daemon
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.2.3"
+  build_resolvers:
+    dependency: transitive
+    description:
+      name: build_resolvers
+      url:
