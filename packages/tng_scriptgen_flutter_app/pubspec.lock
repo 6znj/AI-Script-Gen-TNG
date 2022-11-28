@@ -67,4 +67,16 @@ packages:
   build_runner_core:
     dependency: transitive
     description:
-      name: 
+      name: build_runner_core
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "2.0.1"
+  built_collection:
+    dependency: transitive
+    description:
+      name: built_collection
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "4.2.2"
+  built_value:
+    depende
