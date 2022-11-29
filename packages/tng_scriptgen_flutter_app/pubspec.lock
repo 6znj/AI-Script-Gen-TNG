@@ -79,4 +79,18 @@ packages:
     source: hosted
     version: "4.2.2"
   built_value:
-    depende
+    dependency: transitive
+    description:
+      name: built_value
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "6.7.1"
+  charcode:
+    dependency: transitive
+    description:
+      name: charcode
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.1.2"
+  checked_yaml:
+    dependency: 
