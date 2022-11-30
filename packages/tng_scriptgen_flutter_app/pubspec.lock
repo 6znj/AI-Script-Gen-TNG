@@ -93,4 +93,18 @@ packages:
     source: hosted
     version: "1.1.2"
   checked_yaml:
-    dependency: 
+    dependency: transitive
+    description:
+      name: checked_yaml
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.2"
+  code_builder:
+    dependency: transitive
+    description:
+      name: code_builder
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "3.2.0"
+  collection:
+    dependency: t
