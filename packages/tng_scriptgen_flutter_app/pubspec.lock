@@ -107,4 +107,19 @@ packages:
     source: hosted
     version: "3.2.0"
   collection:
-    dependency: t
+    dependency: transitive
+    description:
+      name: collection
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.14.11"
+  convert:
+    dependency: transitive
+    description:
+      name: convert
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "2.1.1"
+  crypto:
+    dependency: transitive
+    desc
