@@ -122,4 +122,18 @@ packages:
     version: "2.1.1"
   crypto:
     dependency: transitive
-    desc
+    description:
+      name: crypto
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "2.1.3"
+  csslib:
+    dependency: transitive
+    description:
+      name: csslib
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.16.1"
+  cupertino_icons:
+    dependency: "direct main"
+    descripti
