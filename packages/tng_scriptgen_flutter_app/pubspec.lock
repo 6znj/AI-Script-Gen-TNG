@@ -136,4 +136,19 @@ packages:
     version: "0.16.1"
   cupertino_icons:
     dependency: "direct main"
-    descripti
+    description:
+      name: cupertino_icons
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.1.2"
+  dart_style:
+    dependency: transitive
+    description:
+      name: dart_style
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.2.3"
+  deeply:
+    dependency: transitive
+    description:
+     
