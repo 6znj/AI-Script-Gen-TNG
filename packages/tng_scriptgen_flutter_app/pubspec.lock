@@ -265,4 +265,18 @@ packages:
     description:
       name: js
       url: "https://pub.dartlang.org"
-    source: ho
+    source: hosted
+    version: "0.6.1+1"
+  json_annotation:
+    dependency: transitive
+    description:
+      name: json_annotation
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "2.4.0"
+  kernel:
+    dependency: transitive
+    description:
+      name: kernel
+      url: "https://pub.dartlang.org"
+    source: 
