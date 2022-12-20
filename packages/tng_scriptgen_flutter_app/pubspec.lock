@@ -240,4 +240,14 @@ packages:
     description:
       path: "package/inject"
       ref: HEAD
-      resolved-ref: "4ffd3d
+      resolved-ref: "4ffd3d339d8b776b2bec8d95ae6d3d168856e76c"
+      url: "https://github.com/google/inject.dart.git"
+    source: git
+    version: "1.0.0-alpha"
+  inject_generator:
+    dependency: "direct dev"
+    description:
+      path: "package/inject_generator"
+      ref: HEAD
+      resolved-ref: "4ffd3d339d8b776b2bec8d95ae6d3d168856e76c"
+      url: "https:
