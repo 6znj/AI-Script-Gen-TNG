@@ -250,4 +250,19 @@ packages:
       path: "package/inject_generator"
       ref: HEAD
       resolved-ref: "4ffd3d339d8b776b2bec8d95ae6d3d168856e76c"
-      url: "https:
+      url: "https://github.com/google/inject.dart.git"
+    source: git
+    version: "1.0.0-alpha"
+  io:
+    dependency: transitive
+    description:
+      name: io
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.3.3"
+  js:
+    dependency: transitive
+    description:
+      name: js
+      url: "https://pub.dartlang.org"
+    source: ho
