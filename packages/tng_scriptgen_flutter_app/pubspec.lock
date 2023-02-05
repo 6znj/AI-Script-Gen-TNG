@@ -308,4 +308,20 @@ packages:
       name: mime
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0
+    version: "0.9.6+3"
+  node_interop:
+    dependency: transitive
+    description:
+      name: node_interop
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.3"
+  node_io:
+    dependency: transitive
+    description:
+      name: node_io
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.1+2"
+  objectdb:
+    de
