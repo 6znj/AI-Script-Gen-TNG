@@ -324,4 +324,15 @@ packages:
     source: hosted
     version: "1.0.1+2"
   objectdb:
-    de
+    dependency: "direct main"
+    description:
+      name: objectdb
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.7+1"
+  package_config:
+    dependency: transitive
+    description:
+      name: package_config
+      url: "https://pub.dartlang.org"
+    source: ho
