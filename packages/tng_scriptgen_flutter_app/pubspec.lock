@@ -335,4 +335,17 @@ packages:
     description:
       name: package_config
       url: "https://pub.dartlang.org"
-    source: ho
+    source: hosted
+    version: "1.1.0"
+  package_resolver:
+    dependency: transitive
+    description:
+      name: package_resolver
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.10"
+  path:
+    dependency: transitive
+    description:
+      name: path
+      url: "https://p
