@@ -362,4 +362,17 @@ packages:
     dependency: transitive
     description:
       name: pedantic
- 
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.8.0+1"
+  plugin:
+    dependency: transitive
+    description:
+      name: plugin
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.2.0+3"
+  pool:
+    dependency: transitive
+    description:
+      
