@@ -432,4 +432,16 @@ packages:
       name: stack_trace
       url: "https://pub.dartlang.org"
     source: hosted
-    versi
+    version: "1.9.3"
+  stream_channel:
+    dependency: transitive
+    description:
+      name: stream_channel
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "2.0.0"
+  stream_transform:
+    dependency: transitive
+    description:
+      name: stream_transform
+      url: "https://pub.dartlang.org"
