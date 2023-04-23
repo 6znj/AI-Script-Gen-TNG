@@ -445,3 +445,19 @@ packages:
     description:
       name: stream_transform
       url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.0.19"
+  string_scanner:
+    dependency: transitive
+    description:
+      name: string_scanner
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.5"
+  term_glyph:
+    dependency: transitive
+    description:
+      name: term_glyph
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version
