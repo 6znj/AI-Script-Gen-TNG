@@ -460,4 +460,19 @@ packages:
       name: term_glyph
       url: "https://pub.dartlang.org"
     source: hosted
-    version
+    version: "1.1.0"
+  test_api:
+    dependency: transitive
+    description:
+      name: test_api
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.2.5"
+  timing:
+    dependency: transitive
+    description:
+      name: timing
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.1.1+2"
+  typed
