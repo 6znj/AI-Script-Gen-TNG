@@ -502,3 +502,14 @@ packages:
       name: web_socket_channel
       url: "https://pub.dartlang.org"
     source: hosted
+    version: "1.1.0"
+  yaml:
+    dependency: transitive
+    description:
+      name: yaml
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "2.2.0"
+sdks:
+  dart: ">=2.3.0 <3.0.0"
+  flutter: ">=0.1.4 <2.0.0"
