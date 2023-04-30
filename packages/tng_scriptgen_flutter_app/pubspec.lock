@@ -488,3 +488,17 @@ packages:
       name: vector_math
       url: "https://pub.dartlang.org"
     source: hosted
+    version: "2.0.8"
+  watcher:
+    dependency: transitive
+    description:
+      name: watcher
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.9.7+12"
+  web_socket_channel:
+    dependency: transitive
+    description:
+      name: web_socket_channel
+      url: "https://pub.dartlang.org"
+    source: hosted
